@@ -5,7 +5,7 @@ const Nav = () => {
                 <h1>Meme Generator</h1>
                 </div>
             <div className="name">
-                <p>Made with React.jss</p>
+                <p>Made with React.js</p>
             </div>
         </nav>
     );

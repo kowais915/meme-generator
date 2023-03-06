@@ -1,4 +1,12 @@
+import {useState} from 'react';
+
 const Ui = () => {
+const [count, setCount] = useState(0);
+
+function counter(){
+  setCount(count + 1);
+}
+
     return (
         <div className = "ui">
 
@@ -9,7 +17,11 @@ const Ui = () => {
                 </form>
                 
                <div>
-               <button>Generate Meme</button>
+               <button onClick={counter}>Generate Meme</button>
+               </div>
+
+               <div className="counter">
+                {count}
                </div>
                 
        
