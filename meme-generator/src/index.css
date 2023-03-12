@@ -48,12 +48,15 @@ button{
   height: 50px;
   grid-column: 1/3;
   grid-row: 1/3;
+  display: block;
+  margin: 0 auto;
   
 }
 
 button:hover{
   background-color: #A626D3;
   border: solid 2px white;
+
 }
 form{
   margin-bottom: 20px;
