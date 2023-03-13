@@ -6,6 +6,8 @@ const Ui = () => {
 
 const [url, setUrl ] = useState({})
 const [meme, setMeme ] = useState([])
+const [upperText, setUpperText] = useState('')
+const [lowerText, setLowerText ] = useState('');
 
 
 
@@ -29,7 +31,16 @@ const getAMeme = ()=>{
         ...prevUrl, 
         randomImage: url
     }))
+
+    setUpperText('')
+    setLowerText('')
    
+}
+
+const handleChange = (e) =>{
+
+    e.preventDefault()
+    setUpperText(e.target.value)
 }
 
 
@@ -41,15 +52,17 @@ const getAMeme = ()=>{
 
                 <div>
 
-                    <input placeholder="Enter first sentence"></input>
-                    <input placeholder="Enter second sentence"></input>
+                    <input placeholder="Enter first sentence" onChange={e=>setUpperText(e.target.value) } value={upperText}/>
+                    <input placeholder="Enter second sentence" onChange={e=>setLowerText(e.target.value)} value={lowerText}></input>
                     <button onClick={getAMeme}>Generate Meme</button>
             
                 </div>               
 
                 {/* meme image */}
                 <div className="image">
+                    <h2 className='upper'>{upperText}</h2>
                     <img src={url.randomImage} alt="cool" />
+                    <h2 className='lower'>{lowerText}</h2>
                 </div>
             
         </div>
