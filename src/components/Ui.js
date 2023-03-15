@@ -1,4 +1,4 @@
-import {useState, useEffect, useCallback} from 'react';
+import {useState, useEffect} from 'react';
 
 const Ui = () => {
 
@@ -37,11 +37,11 @@ const getAMeme = ()=>{
    
 }
 
-const handleChange = (e) =>{
+// const handleChange = (e) =>{
 
-    e.preventDefault()
-    setUpperText(e.target.value)
-}
+//     e.preventDefault()
+//     setUpperText(e.target.value)
+// }
 
 
 
